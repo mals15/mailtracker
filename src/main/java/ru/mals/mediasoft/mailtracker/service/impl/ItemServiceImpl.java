@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.mals.mediasoft.mailtracker.dto.ItemCreateDTO;
 import ru.mals.mediasoft.mailtracker.dto.ItemDTO;
 import ru.mals.mediasoft.mailtracker.entity.Item;
+import ru.mals.mediasoft.mailtracker.exteptions.ItemAlreadyExistException;
 import ru.mals.mediasoft.mailtracker.repository.ItemRepository;
 import ru.mals.mediasoft.mailtracker.service.ItemService;
 import ru.mals.mediasoft.mailtracker.service.factory.ItemFactory;
@@ -23,9 +24,8 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public ItemDTO createItem(ItemCreateDTO itemCreateDTO) {
 
-//        if(itemRepository.existsItemByIdentifier(itemCreateDTO.getIdentifier())) {
-//
-//        }
+        if(itemRepository.existsItemByIdentifier(itemCreateDTO.getIdentifier()))
+            throw new ItemAlreadyExistException(itemCreateDTO.getIdentifier());
 
         Item item = itemFactory.build(
                 itemCreateDTO.getIdentifier(),

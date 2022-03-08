@@ -17,7 +17,7 @@ public class ItemControllerImpl implements ItemController {
     private final ItemService itemService;
 
     @Override
-    public ResponseEntity<Object> create(ItemCreateDTO itemCreateDTO) {
+    public ResponseEntity<Object> createItem(ItemCreateDTO itemCreateDTO) {
         ItemDTO itemDto = itemService.createItem(itemCreateDTO);
         return new ResponseEntity<>(itemDto, HttpStatus.OK);
     }

@@ -3,7 +3,6 @@ package ru.mals.mediasoft.mailtracker.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.mals.mediasoft.mailtracker.entity.enums.TrackingStatus;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 

@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.mals.mediasoft.mailtracker.entity.enums.ItemType;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;

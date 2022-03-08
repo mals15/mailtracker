@@ -37,7 +37,7 @@ public interface TrackingController {
             },
             description = "Allows you to find item history"
     )
-    @GetMapping("{itemIdentifier}")
+    @GetMapping("/{itemIdentifier}")
     ResponseEntity<List<TrackingDTO>> getItemTrackingHistory(
             @PathVariable(value = "itemIdentifier") String itemIdentifier);
 

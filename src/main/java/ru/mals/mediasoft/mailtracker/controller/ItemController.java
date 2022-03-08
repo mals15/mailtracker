@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +23,6 @@ public interface ItemController {
             description = "Allows you to create a item"
     )
     @PostMapping("/create")
-    ResponseEntity<Object> create(
+    ResponseEntity<Object> createItem(
             @RequestBody @Parameter(description = "ItemCreateDTO", required = true) ItemCreateDTO itemCreateDTO);
 }
