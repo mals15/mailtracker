@@ -29,5 +29,27 @@
                                     getItemTrackingHistory - получение статуса и полной истории движения почтового отправления,
                                                              get запрос с идентификатором почтового отправления в ответ на который 
                                                              приходит несколько json следующего вида:
-                                    
+                                    [
+                                      {
+                                      "id": 1,
+                                      "itemIdentifier": "identifier123",
+                                      "postOfficeName": "post_1",
+                                      "status": "ARRIVE",
+                                      "createdDateStatus": "2022-03-08T13:59:56.976123"
+                                      },
+                                      {
+                                      "id": 2,
+                                      "itemIdentifier": "identifier123",
+                                      "postOfficeName": "post_1",
+                                      "status": "LEAVE",
+                                      "createdDateStatus": "2022-03-08T14:00:22.209208"
+                                      },
+                                      {
+                                      "id": 3,
+                                      "itemIdentifier": "identifier123",
+                                      "postOfficeName": "post_1",
+                                      "status": "RECEIVE",
+                                      "createdDateStatus": "2022-03-08T14:00:31.234352"
+                                      }
+                                      ]
                                     
