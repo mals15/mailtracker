@@ -14,6 +14,7 @@ public class ItemMapper {
                 item.getType(),
                 item.getRecipientIndex(),
                 item.getRecipientAddress(),
-                item.getRecipientName());
+                item.getRecipientName(),
+                item.getCreatedDate());
     }
 }

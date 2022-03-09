@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import ru.mals.mediasoft.mailtracker.entity.enums.ItemType;
 
+import java.time.LocalDateTime;
+
 @Getter
 @AllArgsConstructor
 public class ItemDTO {
@@ -14,5 +16,6 @@ public class ItemDTO {
     private final long recipientIndex;
     private final String recipientAddress;
     private final String recipientName;
+    private final LocalDateTime createdDate;
 
 }

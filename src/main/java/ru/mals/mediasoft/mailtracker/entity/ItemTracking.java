@@ -1,5 +1,6 @@
 package ru.mals.mediasoft.mailtracker.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.mals.mediasoft.mailtracker.entity.enums.TrackingStatus;
